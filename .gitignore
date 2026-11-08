@@ -1,6 +1,17 @@
-.DS_Store
-Thumbs.db
-desktop.ini
-*.log
-.env
-.env.*
+# Only reviewed public website files belong in this repository.
+/*
+!/.gitignore
+!/.nojekyll
+!/CNAME
+!/README.md
+!/index.html
+!/console.css
+!/console.js
+!/robots.txt
+!/sitemap.xml
+!/assets/
+/assets/*
+!/assets/favicon.svg
+!/assets/favicon-96.png
+!/assets/apple-touch-icon.png
+!/assets/social-card.png
