@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Monolithic Blocks";
+  src: url("assets/console-blocks.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  unicode-range: U+0020, U+2588;
+}
+
 :root {
   color-scheme: dark;
   --ground: #0b0c0a;
@@ -239,12 +248,14 @@ body::after {
 .ascii-wordmark {
   margin: 0 0 var(--line);
   max-width: 100%;
-  font-family: inherit;
+  font-family: "Monolithic Blocks", monospace;
   font-size: min(1.84cqw, 3.6cqh, 24px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
   white-space: pre;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   text-shadow: 0 0 2px rgb(255 211 145 / 45%), 0 0 14px rgb(255 187 85 / 20%);
 }
 
