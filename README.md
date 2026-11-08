@@ -23,9 +23,25 @@ Open http://127.0.0.1:8000. Stop the server with Ctrl+C. You can also open `inde
 
 ## Publish
 
-Push this repository to GitHub, then enable **Settings → Pages → Deploy from a branch → main → / (root)**. No build workflow is required.
+Repository: [pjkinsella/monolithic-site](https://github.com/pjkinsella/monolithic-site).
 
-Configure the custom domain in Pages settings, add the corresponding DNS records, and enable HTTPS after the certificate is available. See [GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+GitHub Pages is enabled with **Deploy from a branch → main → / (root)**. Push changes to `main` to publish them; no build workflow is required. `CNAME` and Pages settings specify `monolithicmfg.com`.
+
+### Connect the domain
+
+DNS is managed at Porkbun. Replace the existing parking records for the root domain and `www` with these records (leave the root Host field blank in Porkbun):
+
+| Type | Host | Answer |
+| --- | --- | --- |
+| A | (blank) | 185.199.108.153 |
+| A | (blank) | 185.199.109.153 |
+| A | (blank) | 185.199.110.153 |
+| A | (blank) | 185.199.111.153 |
+| CNAME | www | pjkinsella.github.io |
+
+Keep email-related MX and TXT records. After DNS resolves to GitHub and the certificate is available, enable **Enforce HTTPS** in [Pages settings](https://github.com/pjkinsella/monolithic-site/settings/pages).
+
+See [GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) and [Porkbun's DNS instructions](https://kb.porkbun.com/article/231-how-to-add-dns-records-on-porkbun).
 
 The contact link uses `hello@monolithicmfg.com`. Configure that mailbox or forwarding alias with the email provider before publishing.
 
