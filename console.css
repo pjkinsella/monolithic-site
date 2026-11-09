@@ -161,9 +161,9 @@ body::after {
 }
 
 @keyframes header-ghost-decay {
-  0%, 25% { opacity: 0.65; }
-  55% { opacity: 0.35; }
-  80% { opacity: 0.12; }
+  0%, 25% { opacity: 0.50; }
+  55% { opacity: 0.26; }
+  80% { opacity: 0.09; }
   100% { opacity: 0; }
 }
 
@@ -239,9 +239,9 @@ body::after {
 
 /* Every frame has its own clock. Its position stays fixed as new frames arrive. */
 @keyframes ghost-decay {
-  0%, 12% { opacity: 0.20; }
-  45% { opacity: 0.10; }
-  75% { opacity: 0.03; }
+  0%, 12% { opacity: 0.15; }
+  45% { opacity: 0.075; }
+  75% { opacity: 0.02; }
   100% { opacity: 0; }
 }
 
